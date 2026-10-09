@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Voice Agent</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/",
+          "@pixiv/three-vrm": "https://cdn.jsdelivr.net/npm/@pixiv/three-vrm@3.5.5/lib/three-vrm.module.min.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+
+    <div id="bubble" class="hidden"></div>
+
+    <!-- Click to start overlay -->
+    <div id="start-overlay">
+      <div class="start-card">
+        <h1 id="start-title">Loading…</h1>
+        <p>Click to start</p>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div id="controls" class="hidden">
+      <div id="status"></div>
+      <div class="row">
+        <input
+          id="input"
+          type="text"
+          placeholder="Type a message… (Enter to send)"
+          autocomplete="off"
+          maxlength="500"
+        />
+        <button id="send">Send</button>
+      </div>
+      <div class="row">
+        <button id="talk" title="Hold to talk (or hold Space)">🎤 Hold to talk</button>
+        <button id="stop">⏹ Stop</button>
+        <button id="dance">💃 Dance</button>
+      </div>
+      <div id="hint">Hold the mic button or Space to speak. Click Stop to interrupt.</div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

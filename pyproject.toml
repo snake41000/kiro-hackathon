@@ -1,0 +1,17 @@
+[project]
+name = "character-voice-agent"
+version = "0.1.0"
+description = "3D character voice agent: Nova Lite + Polly + Transcribe"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "python-dotenv",
+    "boto3",
+    "langgraph",
+    "langchain-aws",
+    "amazon-transcribe",
+]
+
+[tool.uv]
+package = false
